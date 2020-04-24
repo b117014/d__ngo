@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)    # __name__ represent the current file
 
@@ -12,4 +12,4 @@ def hello():
 
 @app.route("/name/<string:name>")      # <string:name> denotes the name is variable that can put on the route and use in function
 def name_(name):
-    return f"hello {name}"
+    return render_template('first.html')
