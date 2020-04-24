@@ -1,4 +1,5 @@
 from flask import Flask,render_template
+import datetime
 
 app = Flask(__name__)    # __name__ represent the current file
 
@@ -13,3 +14,9 @@ def hello():
 @app.route("/name/<string:name>")      # <string:name> denotes the name is variable that can put on the route and use in function
 def name_(name):
     return render_template('first.html',name=name)
+
+@app.route('/newyear')
+def newYear():
+    date = datetime.datetime.now();
+    new_year = date.day == 1 and date.month==1
+    return render_template('first.html',new_year=new_year,date=date)

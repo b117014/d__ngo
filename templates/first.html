@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-     <h1>Hello {{name}}</h1>                         <!-- inside of double semicolone we can pass the variable that is taken by routes       -->
+     <h1>Hello </h1>                         <!-- inside of double semicolone we can pass the variable that is taken by routes       -->
     <h1>Today we gone show you How to develop new things !</h1>
+    {% if new_year %}
+      <h1>Happy New Year</h1>
+      {% else %}
+      <h1>NO</h1>
+    {% endif %}
+    <h1>date is : {{date}}</h1>
 </body>
 </html>
