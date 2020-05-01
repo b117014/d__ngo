@@ -10,3 +10,6 @@
    6. psql <databaseName>   // to enter your database
    7. service postgresql restart // for restarting server of psql
    8. \d     // to check the table but It should be after getting enter the database
+   9. CREATE USER <username> WITH PASSWORD <password> 
+   // creating user with password which help to access data base by creating server
+   10. GRANT ALL PRIVILEGES ON TABLE <tableName> To <username>     // to get the access of of table for particular username and add this username for creating aql server
