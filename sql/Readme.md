@@ -6,3 +6,9 @@
 - Unique
 - Check
 - Default
+
+## Syntax of Sql
+```javascript
+INSERT INTO <tablename> (<nameofcolumns>)           // insert row in table
+        INFO(<dataofeachcoulmn>)
+```
