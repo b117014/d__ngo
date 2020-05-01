@@ -26,7 +26,7 @@ SELECT * FROM <tableName>
         ORDER BY <colmnName> ASC    //     arrange the data ascending order by <colmnnAME>
 
 SELECT <col1>,<col2>,.. FROM <table1> JOIN <table2>  
-         ON <table1.id> = <table2.id>;   // get data of two table ehere one table              referencing to others
+         ON <table1.id> = <table2.id> WHERE <condn>;   // get data of two table ehere one table              referencing to others
 
 CREATE TABLE <tablename>(
     id SERIAL PRIMARY KEY,
@@ -61,3 +61,12 @@ CREATE TABLE <tablename>(
 ## Foregin Keys
 - the key which helps to relate the multiple table .
 - Foregin key is the referencing of the other table
+
+## Types Of Join
+1. JOIN / INNER JOIN
+2. LEFT OUTER JOIN
+3. RIGHT OUTER JOIN
+4. FULL OUTER JOIN
+
+## Sql Injection
+
