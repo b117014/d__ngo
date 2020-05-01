@@ -16,6 +16,11 @@ SELECT * from <tableName> WHERE <colmnName> in ("") ;    // That's for to find t
 
 SELECT * from <tableName> WHERE <colmnName> LIKE '%a%'   // here % means any character and this syntax means that find the data where the columnName contains "a" character and "%a%" means that any character then a follow of any charcter.
 
+UPDATE <tableName> 
+      SET <colmnName> = ""        // updating the colomn data 
+
+DELETE from <tableName>
+        WHERE <colmnName> = ""   
 
 ```
 
@@ -23,6 +28,11 @@ SELECT * from <tableName> WHERE <colmnName> LIKE '%a%'   // here % means any cha
    Ex- INSERT INTO flight
             (source, destination, date)
             INFO("Delhi","Bhubaneswar","6 May")
+   Ex- UPDATE flights
+           SET duration = 30
+           where origin = "New Delhi" ;
+   Ex- DELETE from flights
+             WHERE origin = "New Delhi" ;
 
 ```
 
