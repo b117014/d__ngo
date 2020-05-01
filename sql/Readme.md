@@ -10,7 +10,13 @@
 ## Syntax of Sql
 ```javascript
 INSERT INTO <tablename> (<nameofcolumns>)           // insert row in table 
-        INFO(<dataofeachcoulmn>)                   
+        INFO(<dataofeachcoulmn>);
+
+SELECT * from <tableName> WHERE <colmnName> in ("") ;    // That's for to find the data ehere <colmnName> consist in ()
+
+SELECT * from <tableName> WHERE <colmnName> LIKE '%a%'   // here % means any character and this syntax means that find the data where the columnName contains "a" character
+
+
 ```
 
 ``` javascript
