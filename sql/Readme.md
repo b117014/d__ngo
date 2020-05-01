@@ -22,6 +22,19 @@ UPDATE <tableName>
 DELETE from <tableName>
         WHERE <colmnName> = ""   
 
+SELECT * FROM <tableName> 
+        ORDER BY <colmnName> ASC    //     arrange the data ascending order by <colmnnAME>
+
+SELECT <col1>,<col2>,.. FROM <table1> JOIN <table2>  
+         ON <table1.id> = <table2.id>;   // get data of two table ehere one table              referencing to others
+
+CREATE TABLE <tablename>(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    flight_id INTEGER REFERENCES <tablename2>
+);
+)
+
 ```
 
 ``` javascript
@@ -33,6 +46,8 @@ DELETE from <tableName>
            where origin = "New Delhi" ;
    Ex- DELETE from flights
              WHERE origin = "New Delhi" ;
+   Ex- SECECT origin, COUNT(*) from flights 
+             GROUP BY origin HAVING COUNT(*)>1;
 
 ```
 
@@ -42,3 +57,7 @@ DELETE from <tableName>
 3. MAX
 4. COUNT
 5. SUM
+
+## Foregin Keys
+- the key which helps to relate the multiple table .
+- Foregin key is the referencing of the other table
