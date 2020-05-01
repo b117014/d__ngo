@@ -68,5 +68,9 @@ CREATE TABLE <tablename>(
 3. RIGHT OUTER JOIN
 4. FULL OUTER JOIN
 
-## Sql Injection
+- To resolve the Problem of Race Condition , Sql Transaction is used in database.
+
+## Sql Transaction
+1. BEGIN
+2. COMMIT
 
