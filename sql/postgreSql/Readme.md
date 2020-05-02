@@ -13,3 +13,4 @@
    9. CREATE USER <username> WITH PASSWORD <password> 
    // creating user with password which help to access data base by creating server
    10. GRANT ALL PRIVILEGES ON TABLE <tableName> To <username>     // to get the access of of table for particular username and add this username for creating aql server
+   11. grant all on sequence <fligts_id_seq> to <username> // to give the grant to use the table by username
