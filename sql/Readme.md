@@ -105,4 +105,33 @@ COMMIT;
 -----------------------------------------------
 db.session.commit();
 
+
+SELECT * FROM flights ORDER BY origin;
+-----------------------------------------------
+Flight.query.order_by(Flight.origin).all()
+
+
+SELECT * FROM flights ORDER BY origin DESC;
+-----------------------------------------------
+Flight.query.order_by(Flight.origin.desc()).all()
+
+
+SELECT * FROM flights WHERE origin != "Paris";
+-----------------------------------------------
+Flight.query.filter(Flight.origin != "Paris").all()
+
+
+SELECT * FROM flights WHERE origin LIKE "%a%";
+-----------------------------------------------
+Flight.query.filter(Flight.origin.like("%a%")).all()
+
+
+SELECT * FROM flights WHERE origin IN ('Tokyo','Paris');
+---------------------------------------------------------
+Flight.query.filter(Flight.origin.in_(['Tokyo','Paris'])).all()
+
+
+SELECT * FROM flights WHERE origin = "Paris" AND duration > 5 ;
+-----------------------------------------------------------------
+Flight.query.filter(and_(Flight.origin == "Paris", Flight.duration > 5)).all()
 ```
