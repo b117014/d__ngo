@@ -134,4 +134,16 @@ Flight.query.filter(Flight.origin.in_(['Tokyo','Paris'])).all()
 SELECT * FROM flights WHERE origin = "Paris" AND duration > 5 ;
 -----------------------------------------------------------------
 Flight.query.filter(and_(Flight.origin == "Paris", Flight.duration > 5)).all()
+
+
+SELECT * FROM flights JOIN passangers ON flights.id = passangers.flight_id;
+---------------------------------------------------------------------------
+db.session.query(Flight, Passanger).filter(Flight.id == Passanger.flight_id).all()
+
+
+
+
+
+
+
 ```
