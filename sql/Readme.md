@@ -74,3 +74,35 @@ CREATE TABLE <tablename>(
 1. BEGIN
 2. COMMIT
 
+
+## Sql and flask_alchemy
+
+``` javascript
+
+SELECT * FROM flights WHERE origin = "Paris" ;
+------------------------------------------------
+Flights.query.filter_by(origin="Paris").all() ;
+
+
+SELECT * FROM flights WHERE id = 28;
+------------------------------------------------
+Flights.query.filter_by(id=28).first()   ||  Flights.query.get(28)
+
+
+UPDATE flights SET duration =7 WHERE id = 3;
+------------------------------------------------
+flight = Flights.query.get(3)
+flight.duration = 7
+
+
+DELETE FROM flights where id=5;
+------------------------------------------------
+flight = Flights.query.get(5)
+db.session.delete(flight)
+
+
+COMMIT;
+-----------------------------------------------
+db.session.commit();
+
+```
