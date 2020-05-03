@@ -28,3 +28,7 @@ if __name__ == "__main__":
 
 # SELECT * FROM fligts    ===    Fligts.query.all()
 #  SELECT * FROM flights WHERE origin = "Paris"    ===   Flights.query.filter_by(origin="Paris").all()
+
+# SELECT COUNT(*) from flights where origin = "Paris"    === Flights.query.filter_by(origin="Paris").count()
+
+# SELECT * FROM flights WHERE id = 28         ===   Flights.query.get(28) || Flights.query.filter_by(id=28).first()
