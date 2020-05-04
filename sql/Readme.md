@@ -141,9 +141,12 @@ SELECT * FROM flights JOIN passangers ON flights.id = passangers.flight_id;
 db.session.query(Flight, Passanger).filter(Flight.id == Passanger.flight_id).all()
 
 
-
-
-
-
-
 ```
+
+## HTTP Methods
+
+- GET: retrieve resource
+- POST: create new resource
+- PUT: replace a resource
+- PATCH: update a resource
+- DELETE: delete a resource
